@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Browse open jobs by category.">
+    <title>Browse Job Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+ 
+        .category-card {
+            min-height: 92px;
+        }
+
+        .category-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .explore-card {
+            background-color: #ff8248;
+            background-image: url("data:image/svg+xml,%3Csvg width='120' height='96' viewBox='0 0 120 96' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-10 14C20-4 36 2 58 16s37 20 72-1M-10 31c28-16 45-12 67 2s36 20 73-1M-10 79c28-18 46-17 68-3s36 20 72-1' fill='none' stroke='%23ffffff' stroke-opacity='.18'/%3E%3C/svg%3E");
+            background-position: center;
+            background-size: cover;
+        }
+
+        @media (max-width: 380px) {
+            .category-card {
+                min-height: 100px;
+            }
+        }
+    </style>
 </head>
-<body>
-    
+<body class="min-h-screen border-t-4 border-[#e5e5e5] bg-white text-[#123653]">
+    <main class="mx-auto w-full max-w-[490px] px-4 pb-10 pt-6 sm:px-0 sm:pt-6">
+        <h1 class="mb-6 text-center text-[15px] font-bold leading-[17px] sm:mb-6">
+            Browse by<br>
+            <span class="underline decoration-2 decoration-[#ff8248] underline-offset-2">Job</span>
+            Categories
+        </h1>
+
+        <section aria-label="Job categories" class="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M3 10v4h3l4 3V7l-4 3H3Zm9-1.6v7.2a5 5 0 0 0 0-7.2ZM14 6.5v13a9 9 0 0 0 0-13Z"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Digital Marketing</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>143 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="m14.7 4.3 5 5-9.9 9.9-5.7 1.4 1.4-5.7 9.2-9.2Zm1.4-1.4a2 2 0 0 1 2.8 0l2.2 2.2a2 2 0 0 1 0 2.8l-.7.7-5-5 .7-.7ZM8.1 15.9l-1 3 3-1-2-2Z"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Art &amp; Design</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>70 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" aria-current="true" class="category-card group relative flex flex-col rounded-[4px] border-2 border-[#19b66b] bg-[#f7f8f8] p-2 transition hover:border-[#139858] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#19b66b] sm:p-2">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#ff8248] text-white shadow-md" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16 8.5c-.6-.8-1.6-1.3-3-1.3-1.7 0-2.8.8-2.8 2s1.1 1.8 3 2.2 3 .9 3 2.3-1.2 2.2-3.1 2.2c-1.4 0-2.6-.5-3.4-1.5M13 5.5v13"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Accounting</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>168 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Zm4 0 1.2-2h3.6L15 8m-3 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Photography</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>95 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 19h14M7 17V7a2 2 0 0 1 2-2h8v8M6 18l12-12m-5 0h4v4"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Copy Writing</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>13 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 13v-2a8 8 0 0 1 16 0v2M4 13h3v6H6a2 2 0 0 1-2-2v-4Zm16 0h-3v6h1a2 2 0 0 0 2-2v-4Zm-8 7h3"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3">Music</span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>55 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="category-card group flex flex-col rounded-[4px] border border-[#edf0f2] bg-white p-2.5 transition hover:border-[#ff8248] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff8248] sm:p-2.5">
+                <span class="category-icon mb-3 flex items-center justify-center rounded-full bg-[#fff2eb] text-[#ff8248]" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M12 3a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM5 11a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM10 10h4v10h-4zM4 16h2v4H4zm14 0h2v4h-2z"/></svg>
+                </span>
+                <span class="mt-auto text-[8px] font-semibold leading-3"><span class="outline outline-1 outline-[#f05a49]">Human Resources</span></span>
+                <span class="mt-1 flex items-center justify-between text-[6px] leading-3 text-[#8795a1]"><span>25 Jobs Opened</span><span class="text-[10px] text-[#123653]" aria-hidden="true">→</span></span>
+            </a>
+
+            <a href="#" class="explore-card category-card flex flex-col justify-center rounded-[4px] border-2 border-[#ff39ba] px-4 text-white transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff39ba] sm:px-4">
+                <span class="flex items-center justify-between gap-2 text-[9px] font-medium leading-[13px]">
+                    <span>Explore<br>30 More<br>Categories</span>
+                    <span class="text-sm" aria-hidden="true">←</span>
+                </span>
+            </a>
+        </section>
+    </main>
 </body>
 </html>
